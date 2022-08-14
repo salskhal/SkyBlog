@@ -6,7 +6,7 @@
       >
         <div class=" col-1 gap-8 flex flex-1 flex-col md:gap-0">
           <router-link
-            :to="{ name: 'home' }"
+            :to="{ name: 'Home' }"
             class="font-semibold flex text-2xl items-center text-white"    >SkyBlog</router-link
           >
           <ul class="flex gap-4 list-none mt-auto">
@@ -26,9 +26,9 @@
         </div>
         <div class="col-2 gap-8 flex flex-1 md:gap-0 px-4 md:px-0 " >
           <ul class="flex gap-4 list-none h-full justify-center flex-row flex-wrap md:flex-col">
-            <router-link :to="{ name: 'home' }" class="test-base font-medium text-white no-underline">Home</router-link>
-            <router-link :to="{ name: 'home' }" class="test-base font-medium text-white no-underline">Blogs</router-link>
-            <router-link :to="{ name: 'home' }" class="test-base font-medium text-white no-underline">Login / Regiser</router-link>
+            <router-link :to="{ name: 'Home' }" class="test-base font-medium text-white no-underline">Home</router-link>
+            <router-link :to="{ name: 'Home' }" class="test-base font-medium text-white no-underline">Blogs</router-link>
+            <router-link :to="{ name: 'Home' }" class="test-base font-medium text-white no-underline">Login / Regiser</router-link>
           </ul>
         </div>
       </div>

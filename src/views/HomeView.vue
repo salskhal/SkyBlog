@@ -15,7 +15,7 @@
       </div>
       <div class="grid  md:grid-cols-2 lg:grid-cols-4 gap-8">
         <BlogPost
-          v-for="(blog, index) in blogCards"
+          v-for="(blog, index) in tryblog"
           :key="index"
           :blog="blog"
         />
@@ -25,10 +25,12 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import Landing from "../components/Landing.vue";
 import BlogCard from "../components/BlogCard.vue";
 import BlogPost from "../components/BlogPost.vue";
+import { useBlogStore } from "../stores/counter";
+
 
 const landingInfo = ref({
   title: "Our blog",
@@ -49,26 +51,11 @@ const sampleBlog = ref([
   },
 ]);
 
-const blogCards = ref([
-  {
-    blogTitle: "Blog Card #1",
-    blogCoverPhoto: "stock-1",
-    blogDate: "May 1, 2022",
-  },
-  {
-    blogTitle: "Blog Card #2",
-    blogCoverPhoto: "stock-2",
-    blogDate: "May 1, 2022",
-  },
-  {
-    blogTitle: "Blog Card #3",
-    blogCoverPhoto: "stock-3",
-    blogDate: "May 1, 2022",
-  },
-  {
-    blogTitle: "Blog Card #4",
-    blogCoverPhoto: "stock-4",
-    blogDate: "May 1, 2022",
-  },
-]);
+const blogCards = useBlogStore()
+
+
+const tryblog = computed(() =>{
+  return blogCards.blogs
+})
+
 </script>

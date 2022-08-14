@@ -14,7 +14,7 @@
         class="h-full rounded shadow-2xl"
       />
     </div>
-    <div class="mt-4 px-6">
+    <div class="mt-4 px-6 py-5">
       <h1 class="texr text-2xl font-bold mb-4">{{ content.title }}</h1>
       <p class="mb-2">{{ content.content }}</p>
       <router-link to="#" class="flex items-center gap-2 hover:text-gray-600 ease-in-out duration-500">

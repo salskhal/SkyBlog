@@ -1,7 +1,7 @@
 <template>
   <div class="relative cursor-pointer bg-white rounded-lg overflow-hidden flex flex-col">
-    <div class="absolute gap-2 flex right-3 top-3">
-      <div class="h-8 w-8 bg-white flex p-2 border rounded-full items-center justify-center hover:text-white hover:bg-red-600">
+    <div class="absolute gap-2 flex right-3 top-3" v-show="edit">
+      <div class="h-8 w-8 bg-white flex p-2 border rounded-full items-center justify-center hover:text-white hover:bg-red-600" @click="deleteMe">
         <Delete  />
       </div>
       <div class="h-8 w-8 bg-white flex p-2  border rounded-full items-center justify-center hover:text-white hover:bg-black">
@@ -42,8 +42,13 @@
 import Delete from "../assets/Icons/trash-regular.svg";
 import Edit from "../assets/Icons/edit-regular.svg";
 import Arrow from "../assets/Icons/arrow-right-light.svg"
+
+const deleteMe = () =>{
+  console.log("deleted")
+}
 defineProps({
   blog: Object,
+  edit: Boolean
 });
 </script>
 
