@@ -13,6 +13,8 @@ module.exports = {
         "mobileBg": "#303030",
         "headerCol": "#1d1f32",
         "mainBg": "#faf3e7",
+        "primary": "#e9ca96",
+        "input": "#f2f7f6",
       },
       flex: {
         '2': '2 2 0%',
