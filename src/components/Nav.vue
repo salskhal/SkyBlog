@@ -5,6 +5,7 @@
         <router-link
           :to="{ name: 'Home' }"
           class="logo font-semibold text-2xl items-center text-black"
+           @click="closetoggle"
         >SkyBlog</router-link
         >
       </div>
